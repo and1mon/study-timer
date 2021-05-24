@@ -19,3 +19,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.status-outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
