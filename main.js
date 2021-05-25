@@ -1,8 +1,8 @@
 const timer = document.getElementById("timer");
 const startButton = document.getElementById("start-button");
 const status = document.getElementById("status");
-let workTime = 10;
-let breakTime = 5;
+let workTime = 1500;
+let breakTime = 600;
 let timeLeft = workTime;
 let minutesLeft = Math.floor(timeLeft / 60);
 let secondsLeft = timeLeft % 60;
