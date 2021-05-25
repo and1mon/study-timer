@@ -1,27 +1,49 @@
-body{
-    background-color: rgba(28, 61, 250, 0.582);
+body {
+    background-color: #1c3dfa94;
 }
 
-.header{
+.timer-outer {
+    background-color: #1c3dfa;
+    margin: 0 33%;
+}
+
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.countdown{
+.status-div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.buttons{
+.timer-div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.status-outer{
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.button {
+    background-color: rgba(255, 0, 0, 0);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    padding: 20px;
+    background-color:black;
+}
+
+.button img{
+    height: 30px;
 }
