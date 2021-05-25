@@ -2,9 +2,14 @@ body {
     background-color: #1c3dfa94;
 }
 
-.timer-outer {
+.timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-contents{
     background-color: #0000004b;
-    margin: 0 33%;
     border-radius: 2rem;
 }
 
@@ -14,16 +19,17 @@ body {
     align-items: center;
 }
 
-.status-div {
+#status {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.timer-div {
+#timer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 3rem;
 }
 
 .buttons {
@@ -35,10 +41,7 @@ body {
 .button {
     background-color: rgba(255, 0, 0, 0);
     text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
+    border: 2px solid #fff;
     border-radius: 3rem;
     cursor: pointer;
     padding: 20px;
