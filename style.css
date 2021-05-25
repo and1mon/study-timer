@@ -3,8 +3,9 @@ body {
 }
 
 .timer-outer {
-    background-color: #1c3dfa;
+    background-color: #0000004b;
     margin: 0 33%;
+    border-radius: 2rem;
 }
 
 .header {
