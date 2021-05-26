@@ -1,7 +1,7 @@
 body {
   background-color: #ff6f3c;
   margin: 0;
-  font-family: "Pattaya", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .timer-container {
@@ -14,8 +14,8 @@ body {
 .timer-contents {
   background-color: #ffffff31;
   border-radius: 2rem;
-  width: 100%;
-  max-width: 40rem;
+  width: 800px;
+  max-width: 95%;
   margin: 1rem;
 }
 
@@ -32,6 +32,7 @@ body {
   font-size: 3rem;
   color: #155263;
   margin: 0;
+  font-family: "Pattaya", sans-serif;
 }
 
 #status,
@@ -46,13 +47,13 @@ body {
   font-size: 10rem;
   margin: 1rem;
   color: #fff;
-  font-family: "Lato", sans-serif;
 }
 
 #status {
   font-size: 4rem;
   color: #155263;
   margin: 1rem;
+  font-family: "Pattaya", sans-serif;
 }
 
 .button {
@@ -72,4 +73,63 @@ body {
 
 .button:hover{
   background-color: #227d96;
+}
+
+.settings{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0) /*scale(0) = Invisible*/;
+  background-color:#fff;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  z-index: 10;
+  width: 500px;
+  max-width: 80%; 
+}
+
+.settings.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.settings-header{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.settings-title{
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.close-button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.settings-body{
+  padding: 10px 15px;
+}
+
+#overlay{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active{
+  pointer-events: all;
+  opacity: 1;
 }

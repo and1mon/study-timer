@@ -1,6 +1,11 @@
 const timer = document.getElementById("timer");
 const startButton = document.getElementById("start-button");
 const status = document.getElementById("status");
+const openModalButtons = document.querySelectorAll("[data-modal-target]");
+const closeModalButtons = document.querySelectorAll("[data-close-button]");
+const overlay = document.getElementById("overlay");
+
+
 let workTime = 1500;
 let breakTime = 600;
 let timeLeft = workTime;
@@ -11,9 +16,31 @@ let isRunning = false;
 
 DisplayTimer();
 
-startButton.addEventListener("click", function() {
+startButton.addEventListener("click", () => {
     ClickManager();
 });
+
+openModalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const modal = document.querySelector(button.dataset.modalTarget);
+        OpenModal(modal);
+    })
+})
+
+overlay.addEventListener("click", () => {
+    const modals = document.querySelectorAll(".modal.active");
+    modals.forEach(modal => {
+        CloseModal(modal);
+    })
+  })
+
+closeModalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const modal = button.closest(".modal");
+        CloseModal(modal);
+    })
+})
+
 
 function ClickManager() {
     if (isRunning) {
@@ -54,3 +81,15 @@ function ResetTimer() {
         isBreak = true;
     }
 }
+
+function OpenModal(modal){
+    if (modal == null) return;
+    modal.classList.add("active");
+    overlay.classList.add("active");
+}
+
+function CloseModal(modal) {
+    if (modal == null) return
+    modal.classList.remove("active")
+    overlay.classList.remove("active")
+  }
