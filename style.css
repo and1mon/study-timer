@@ -69,3 +69,7 @@ body {
 .button img {
   height: 40px;
 }
+
+.button:hover{
+  background-color: #227d96;
+}
