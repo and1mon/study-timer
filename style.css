@@ -114,6 +114,10 @@ body {
   font-weight: bold;
 }
 
+.close-button:hover{
+  color: rgb(209, 56, 56);
+}
+
 .settings-body{
   padding: 10px 15px;
 }
