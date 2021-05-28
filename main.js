@@ -4,9 +4,10 @@ const status = document.getElementById("status");
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
 const closeModalButtons = document.querySelectorAll("[data-close-button]");
 const overlay = document.getElementById("overlay");
+const bellSound = new Audio();
+bellSound.src = "bell-sound.mp3";
 
-
-let workTime = 1500;
+let workTime = 15;
 let breakTime = 600;
 let timeLeft = workTime;
 let minutesLeft = Math.floor(timeLeft / 60);
@@ -58,7 +59,10 @@ function ClickManager() {
 
 function UpdateTimer() {
     timeLeft--;
-    if (timeLeft == -1) {
+    if (timeLeft == 0)
+    {
+        bellSound.play();
+    }else if (timeLeft == -1) {
         ResetTimer();
     }
     DisplayTimer();
