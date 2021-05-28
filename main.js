@@ -4,18 +4,46 @@ const status = document.getElementById("status");
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
 const closeModalButtons = document.querySelectorAll("[data-close-button]");
 const overlay = document.getElementById("overlay");
+const workTimeSelector = document.getElementById("work-time");
+const shortBreakTimeSelector = document.getElementById("short-break-time")
+const longBreakTimeSelector = document.getElementById("long-break-time")
 const bellSound = new Audio();
 bellSound.src = "bell-sound.mp3";
 
-let workTime = 15;
-let breakTime = 600;
+const StateEnum = {
+    work: 1,
+    shortBreak: 2,
+    longBreak: 3
+}
+
+let workTime = workTimeSelector.value * 60;
+let shortBreakTime = shortBreakTimeSelector.value * 60;
+let longBreakTime = longBreakTimeSelector.value * 60;
 let timeLeft = workTime;
 let minutesLeft = Math.floor(timeLeft / 60);
 let secondsLeft = timeLeft % 60;
-let isBreak = false;
 let isRunning = false;
+let workCounter = 1;
+let nextState = StateEnum.shortBreak;
 
 DisplayTimer();
+
+workTimeSelector.oninput = function() {
+    workTime = workTimeSelector.value * 60;
+    if (!isRunning) {
+        timeLeft = workTime
+        DisplayTimer();
+    }
+}
+
+shortBreakTimeSelector.oninput = function() {
+    shortBreakTime = shortBreakTimeSelector.value * 60;
+}
+
+longBreakTimeSelector.oninput = function() {
+    longBreakTime = shortBreakTimeSelector.value * 60;
+}
+
 
 startButton.addEventListener("click", () => {
     ClickManager();
@@ -41,6 +69,7 @@ closeModalButtons.forEach(button => {
         CloseModal(modal);
     })
 })
+
 
 
 function ClickManager() {
@@ -75,14 +104,27 @@ function DisplayTimer() {
 }
 
 function ResetTimer() {
-    if (isBreak) {
-        timeLeft = workTime;
-        status.innerHTML = "Work";
-        isBreak = false;
-    } else {
-        timeLeft = breakTime;
-        status.innerHTML = "Short Break";
-        isBreak = true;
+    switch (nextState) {
+        case 1:
+            timeLeft = workTime;
+            status.innerHTML = "Work";
+            workCounter++;
+            if (workCounter % 4 == 0) {
+                nextState = StateEnum.longBreak;
+            } else {
+                nextState = StateEnum.shortBreak;
+            }
+            break;
+        case 2:
+            timeLeft = shortBreakTime;
+            status.innerHTML = "Short Break";
+            nextState = StateEnum.work;
+            break;
+        case 3:
+            timeLeft = longBreakTime;
+            status.innerHTML = "Long Break";
+            nextState = StateEnum.work;
+            break;
     }
 }
 

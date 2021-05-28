@@ -65,48 +65,52 @@ body {
   background-color: #155263;
   height: 100px;
   width: 100px;
-  margin: 0 5%;
+  margin: 2% 5%;
 }
 
 .button img {
   height: 40px;
 }
 
-.button:hover{
+.button:hover {
   background-color: #227d96;
 }
 
-.settings{
+.settings {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0) /*scale(0) = Invisible*/;
-  background-color:#fff;
+  background-color: #fff;
   border-radius: 1rem;
   box-sizing: border-box;
   z-index: 10;
-  width: 500px;
-  max-width: 80%; 
+  width: 95%;
+  max-width: 400px;
 }
 
-.settings.active{
+.settings-inner{
+  padding: 20px 20px  0;
+}
+
+.settings.active {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.settings-header{
-  padding: 10px 15px;
+.settings-header {
+  padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
 }
 
-.settings-title{
+.settings-title {
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-.close-button{
+.close-button {
   cursor: pointer;
   border: none;
   outline: none;
@@ -115,15 +119,39 @@ body {
   font-weight: bold;
 }
 
-.close-button:hover{
+.close-button:hover {
   color: rgb(209, 56, 56);
 }
 
-.settings-body{
+.timer-settings-outer{
   padding: 10px 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 0 10px;
 }
 
-#overlay{
+.timer-settings {
+  max-width: 30%;
+  margin: 0;
+}
+
+.time-selector {
+  border-radius: 2px;
+  background-color: rgb(240, 240, 240);
+  font-size: 1rem;
+  padding: 10px;
+  border: medium none;
+  color: rgb(85, 85, 85);
+  width: 100%;
+  box-shadow:none;
+}
+
+.time-selector:focus{
+  outline: none;
+}
+
+#overlay {
   position: fixed;
   opacity: 0;
   top: 0;
@@ -134,7 +162,15 @@ body {
   pointer-events: none;
 }
 
-#overlay.active{
+#overlay.active {
   pointer-events: all;
   opacity: 1;
 }
+
+.github{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 10rem;
+}
+
