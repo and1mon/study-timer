@@ -1,5 +1,5 @@
 body {
-  background-color: #ff6f3c;
+  background-color: #303841;
   margin: 0;
   font-family: "Lato", sans-serif;
   min-height: 100vh;
@@ -13,7 +13,7 @@ body {
 }
 
 .timer-contents {
-  background-color: #ffffff31;
+  background-color: #f6c90e;
   border-radius: 2rem;
   width: 600px;
   max-width: 95%;
@@ -21,7 +21,7 @@ body {
 }
 
 .header {
-  background-color: #ffc93c;
+  background-color: #f6c90e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +31,7 @@ body {
 
 .header h1 {
   font-size: 3rem;
-  color: #155263;
+  color: rgb(20, 20, 20);
   margin: 0;
   font-family: "Pattaya", sans-serif;
 }
@@ -47,23 +47,23 @@ body {
 #timer {
   font-size: 10rem;
   margin: 1rem;
-  color: #fff;
+  color: #303841;
 }
 
 #status {
   font-size: 4rem;
-  color: #155263;
+  color: #303841;
   margin: 1rem;
   font-family: "Pattaya", sans-serif;
 }
 
 .button {
   text-decoration: none;
-  border: 2px solid #fff;
+  border: 3px solid #fff;
   border-radius: 4rem;
   cursor: pointer;
   padding: 20px;
-  background-color: #155263;
+  background-color: #303841;
   height: 100px;
   width: 100px;
   margin: 2% 5%;
@@ -74,7 +74,7 @@ body {
 }
 
 .button:hover {
-  background-color: #227d96;
+  background-color: rgb(40, 40, 40);
 }
 
 .settings {
@@ -173,7 +173,7 @@ body {
   justify-content: center;
   align-items:center;
   font-size: 6rem;
-  background-color: rgb(20, 19, 19);
+  background-color: 3a4750;
   top: 100%;
   position: sticky;
 }
