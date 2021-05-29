@@ -11,11 +11,10 @@ body {
   min-height: 100%;
 }
 
-.timer-container {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .timer-contents {
@@ -37,7 +36,7 @@ body {
 
 .header h1 {
   font-size: 3rem;
-  color: rgb(20, 20, 20);
+  color: #303841;
   margin: 0;
   font-family: "Pattaya", sans-serif;
 }
@@ -48,6 +47,35 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.learn-more{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  max-width: 95%;
+  color: #eeeeee;
+}
+
+.learn-more-button{
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: #f6c90e;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.learn-more-button::after{
+  content: "\25be";
+  float: right;
+  transform: scale(1.5);
+}
+
+.learn-more-content{
+display: none;
 }
 
 #timer {

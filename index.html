@@ -14,14 +14,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Pomodoro Timer</title>
+    <title>Study Timer</title>
 </head>
 
 <body>
     <div class="header">
-        <h1>My Pomodoro</h1>
+        <h1>Study Timer</h1>
     </div>
-    <div class="timer-container">
+    <div class="container">
         <div class="timer-contents">
             <h3 id="status">Work</h3>
             <p id="timer"></p>
@@ -29,18 +29,33 @@
                 <button id="start-button" class="button">
                     <img src="play-icon.svg" alt="Start">
                 </button>
-                <button data-modal-target="#settings" class="button">
-                    <img src="settings-icon.svg" alt="Settings">
-                </button>
                 <button id="skip-button" class="button">
                     <img src="skip-icon.svg" alt="Skip">
+                </button>
+                <button data-modal-target="#settings" class="button">
+                    <img src="settings-icon.svg" alt="Settings">
                 </button>
             </div>
         </div>
     </div>
+    <div class="container learn-more-container">
+        <div class="learn-more">
+            <button class="learn-more-button" id = "learn-more-button">Based on the Pomodoro Technique</button>
+            <div class="learn-more-content" id= "learn-more-content">
+                <h3>Pomodoro</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse, dignissimos repellat
+                    reprehenderit libero omnis nobis consequuntur dolorum magni aperiam.</p>
+                <h3>How it works</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse, dignissimos repellat
+                    reprehenderit libero omnis nobis consequuntur dolorum magni aperiam.</p>
+            </div>
+        </div>
+    </div>
+
+
     <div class="footer">
-        <a href="https://github.com/and1mon" target ="_blank"><i class="fa fa-github"></i></a>
-        
+        <a href="https://github.com/and1mon" target="_blank"><i class="fa fa-github"></i></a>
+
     </div>
     <div class="settings modal" id="settings">
         <div class="settings-inner">

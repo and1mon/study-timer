@@ -1,12 +1,15 @@
 const timer = document.getElementById("timer");
 const startButton = document.getElementById("start-button");
+const skipButton = document.getElementById("skip-button");
 const status = document.getElementById("status");
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
 const closeModalButtons = document.querySelectorAll("[data-close-button]");
+const learnMoreButton = document.getElementById("learn-more-button");
 const overlay = document.getElementById("overlay");
 const workTimeSelector = document.getElementById("work-time");
 const shortBreakTimeSelector = document.getElementById("short-break-time")
 const longBreakTimeSelector = document.getElementById("long-break-time")
+const learnMoreContent = document.getElementById("learn-more-content");
 const bellSound = new Audio();
 bellSound.src = "bell-sound.mp3";
 
@@ -27,6 +30,8 @@ let workCounter = 1;
 let nextState = StateEnum.shortBreak;
 
 DisplayTimer();
+learnMoreContent.style.display = "none";
+
 
 workTimeSelector.oninput = function() {
     workTime = workTimeSelector.value * 60;
@@ -47,6 +52,21 @@ longBreakTimeSelector.oninput = function() {
 
 startButton.addEventListener("click", () => {
     ClickManager();
+});
+
+skipButton.addEventListener("click", () => {
+    if (confirm("Do you want to finish the round early?")) {
+        timeLeft = 0;
+    }
+})
+
+learnMoreButton.addEventListener("click", () => {
+    if (learnMoreContent.style.display == "none") {
+        learnMoreContent.style.display = "block";
+    }
+    else {
+        learnMoreContent.style.display = "none";
+    }
 });
 
 openModalButtons.forEach(button => {
