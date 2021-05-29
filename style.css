@@ -1,10 +1,14 @@
+html{
+  height: 100%;
+}
+
 body {
   background-color: #303841;
   margin: 0;
   font-family: "Lato", sans-serif;
   display:flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .timer-container {
