@@ -2,6 +2,8 @@ body {
   background-color: #303841;
   margin: 0;
   font-family: "Lato", sans-serif;
+  display:flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -174,8 +176,7 @@ body {
   align-items:center;
   font-size: 6rem;
   background-color: 3a4750;
-  top: 100%;
-  position: sticky;
+  margin-top: auto;
 }
 
 .footer a{
