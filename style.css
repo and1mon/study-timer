@@ -35,6 +35,7 @@ body {
   width: 600px;
   max-width: 95%;
   margin: 1rem;
+  color: #303841;
 }
 
 .header {
@@ -96,12 +97,10 @@ body {
 #timer {
   font-size: 10rem;
   margin: 1rem;
-  color: #303841;
 }
 
 #status {
   font-size: 4rem;
-  color: #303841;
   margin: 1rem;
   font-family: "Pattaya", sans-serif;
 }

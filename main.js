@@ -11,7 +11,7 @@ const shortBreakTimeSelector = document.getElementById("short-break-time")
 const longBreakTimeSelector = document.getElementById("long-break-time")
 const learnMoreContent = document.getElementById("learn-more-content");
 const bellSound = new Audio();
-bellSound.src = "bell-sound.mp3";
+bellSound.src = "sound/bell-sound.mp3";
 
 const StateEnum = {
     work: 1,
@@ -101,12 +101,12 @@ function ClickManager() {
     if (isRunning) {
         startButton.addEventListener("click", () => clearInterval(interval));
         startButton.removeEventListener("click", () => ClickManager());
-        startButton.innerHTML = "<img src='play-icon.svg' alt='Start'></img>";
+        startButton.innerHTML = "<img src='img/play-icon.svg' alt='Start'></img>";
     } else {
         var interval = setInterval(UpdateTimer, 1000);
         startButton.removeEventListener("click", () => ClickManager());
         startButton.addEventListener("click", () => clearInterval(interval));
-        startButton.innerHTML = "<img src='pause-icon.svg' alt='Pause'>";
+        startButton.innerHTML = "<img src='img/pause-icon.svg' alt='Pause'>";
     }
     isRunning = !isRunning;
 }
