@@ -30,7 +30,6 @@ let workCounter = 1;
 let nextState = StateEnum.shortBreak;
 
 DisplayTimer();
-learnMoreContent.style.display = "none";
 
 
 workTimeSelector.oninput = function() {
@@ -61,12 +60,8 @@ skipButton.addEventListener("click", () => {
 })
 
 learnMoreButton.addEventListener("click", () => {
-    if (learnMoreContent.style.display == "none") {
-        learnMoreContent.style.display = "block";
-    }
-    else {
-        learnMoreContent.style.display = "none";
-    }
+    learnMoreButton.classList.toggle("learn-more-button-active");
+    learnMoreContent.classList.toggle("active");
 });
 
 openModalButtons.forEach(button => {

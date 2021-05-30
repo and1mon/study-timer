@@ -74,8 +74,16 @@ body {
   transform: scale(1.5);
 }
 
+.learn-more-button-active::after{
+  content: "\25b4";
+}
+
 .learn-more-content{
-display: none;
+  display: none
+}
+
+.learn-more-content.active{
+  display: block;
 }
 
 #timer {
