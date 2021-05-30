@@ -28,24 +28,33 @@ let secondsLeft = timeLeft % 60;
 let isRunning = false;
 let workCounter = 1;
 let nextState = StateEnum.shortBreak;
+let state = StateEnum.work;
 
 DisplayTimer();
 
 
 workTimeSelector.oninput = function() {
     workTime = workTimeSelector.value * 60;
-    if (!isRunning) {
-        timeLeft = workTime
+    if (!isRunning && state == StateEnum.work) {
+        timeLeft = workTime;
         DisplayTimer();
     }
 }
 
 shortBreakTimeSelector.oninput = function() {
     shortBreakTime = shortBreakTimeSelector.value * 60;
+    if (!isRunning && state == StateEnum.shortBreak) {
+        timeLeft = shortBreakTime;
+        DisplayTimer();
+    }
 }
 
 longBreakTimeSelector.oninput = function() {
-    longBreakTime = shortBreakTimeSelector.value * 60;
+    longBreakTime = longBreakTimeSelector.value * 60;
+    if (!isRunning && state == StateEnum.longBreak) {
+        timeLeft = longBreakTime;
+        DisplayTimer();
+    }
 }
 
 
@@ -55,7 +64,8 @@ startButton.addEventListener("click", () => {
 
 skipButton.addEventListener("click", () => {
     if (confirm("Do you want to finish the round early?")) {
-        timeLeft = 0;
+        ResetTimer();
+        DisplayTimer();
     }
 })
 
@@ -129,16 +139,19 @@ function ResetTimer() {
             } else {
                 nextState = StateEnum.shortBreak;
             }
+            state = StateEnum.work;
             break;
         case 2:
             timeLeft = shortBreakTime;
             status.innerHTML = "Short Break";
             nextState = StateEnum.work;
+            state = StateEnum.shortBreak;
             break;
         case 3:
             timeLeft = longBreakTime;
             status.innerHTML = "Long Break";
             nextState = StateEnum.work;
+            state = StateEnum.longBreak;
             break;
     }
 }

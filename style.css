@@ -83,8 +83,13 @@ body {
   font-size: 1.25rem;
 }
 
-.learn-more-content h3{
-  text-decoration: underline;
+.learn-more-content a{
+  text-decoration: none;
+  color:#f6c90e;
+}
+
+.learn-more-content li{
+padding-bottom: 1rem;
 }
 
 .learn-more-content.active{
