@@ -232,8 +232,4 @@ body {
   .learn-more-button{
     font-size: 1.2rem;
   }
-  .learn-more-button::after,
-  .learn-more-button-active::after{
-    transform: scale(1.2);
-  }
 }
