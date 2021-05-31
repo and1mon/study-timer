@@ -74,8 +74,6 @@ body {
 
 .learn-more-button-active::after {
   content: "\25b4";
-  transform: scale(1.5);
-  float: right;
 }
 
 .learn-more-content {
@@ -229,5 +227,9 @@ body {
   }
   #timer {
     font-size: 8rem;
+  }
+
+  .learn-more-button{
+    transform: scale(1);
   }
 }
