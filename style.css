@@ -105,6 +105,10 @@ body {
   font-family: "Pattaya", sans-serif;
 }
 
+.buttons{
+  justify-content: space-evenly;
+}
+
 .button {
   text-decoration: none;
   border: 3px solid #fff;
@@ -114,7 +118,7 @@ body {
   background-color: #303841;
   height: 100px;
   width: 100px;
-  margin: 2% 5%;
+  margin: 2% 0;
 }
 
 .button img {
