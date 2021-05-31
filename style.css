@@ -74,6 +74,8 @@ body {
 
 .learn-more-button-active::after {
   content: "\25b4";
+  transform: scale(1.5);
+  float: right;
 }
 
 .learn-more-content {
