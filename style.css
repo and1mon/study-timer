@@ -139,7 +139,6 @@ body {
   padding: 20px 20px 0;
 }
 
-
 .settings.active {
   transform: translate(-50%, -50%) scale(1);
 }
@@ -215,4 +214,14 @@ body {
 
 .footer a {
   color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .button {
+    margin: 2%, 2.5%;
+  }
+  #timer {
+    font-size: 8rem;
+  }
 }
