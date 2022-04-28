@@ -32,7 +32,7 @@
                 <button id="skip-button" class="button">
                     <img src="img/skip-icon.svg" alt="Skip">
                 </button>
-                <button data-modal-target="#settings" class="button">
+                <button id="settings-button" class="button">
                     <img src="img/settings-icon.svg" alt="Settings">
                 </button>
             </div>
@@ -41,10 +41,8 @@
             <button class="learn-more-button" id="learn-more-button">Based on the Pomodoro Technique</button>
             <div class="learn-more-content" id="learn-more-content">
                 <h3>What is the Pomodoro Technique?</h3>
-                <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late
-                    1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in
-                    length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for
-                    'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student. -
+                <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval
+                    is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student. -
                     <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank">Wikipedia</a>
                 </p>
                 <h3>How it works</h3>
@@ -69,22 +67,22 @@
             <div class="settings-title">
                 Settings
             </div>
-            <button data-close-button class="close-button">&times;</button>
+            <button id="close-button">&times;</button>
         </div>
         <div class="settings-body">
             <h3>Timer (minutes)</h3>
             <div class="timer-settings-outer">
                 <div class="timer-settings">
                     <label for="work-time">Work</label>
-                    <input id="work-time" class="time-selector" type=number min="0" value="25" Size="8">
+                    <input id="work-time" class="time-selector" type=number min="1" value="25" Size="8">
                 </div>
                 <div class="timer-settings">
                     <label for="short-break-time">Short Break</label>
-                    <input id="short-break-time" class="time-selector" type=number min="0" value="5" Size="8">
+                    <input id="short-break-time" class="time-selector" type=number min="1" value="5" Size="8">
                 </div>
                 <div class="timer-settings">
                     <label for="long-break-time">Long Break</label>
-                    <input id="long-break-time" class="time-selector" type=number min="0" value="15" Size="8">
+                    <input id="long-break-time" class="time-selector" type=number min="1" value="15" Size="8">
                 </div>
             </div>
         </div>
